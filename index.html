@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        * {
+            box-sizing: border-box; /* Garante que o padding e a borda sejam incluídos nas dimensões do elemento */
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; /* Define a fonte padrão para o documento */
+        }
+
+        body {
+            margin: 0
+        }
+
+        .container {
+            display: grid;
+        }
+
+        header {
+            grid-column-start: 1;
+            grid-column-end: 12;
+            background-color: #506E6A;
+        }
+
+        .menu {
+            display: flex; /* Usa flexbox para o menu */
+            justify-content: center; /* Centraliza o menu */
+            gap: 20px; /*nekocalc.com/px-to-rem-converter*/ /* Espaço entre os itens */
+            margin-bottom: 15px; /* Espaço abaixo do menu */
+            margin-top: 15px; /* Espaço acima do menu */
+        }
+
+        .imagem_leo {
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+
+        .principal {
+            grid-column-start: 4;
+            grid-column-end: 12;
+            padding-left: 15px;
+            padding-right: 15px;
+            text-align: justify;
+            margin-right: 15px;
+        }
+
+        footer {
+            grid-column-start: 1;
+            grid-column-end: 12;
+            background-color: #506E6A;
+            color: white;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-size: 8px;
+        }
+
+        ul {
+            list-style-type: none; /* Remove os marcadores da lista */
+            color: #506E6A; /* Cor do texto */
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 0;
+            padding: 0;
+            width: 80%;
+        }
+
+        a,
+        a:link {
+            display: block;
+            text-decoration: none; /* Remove o sublinhado */
+            padding: 8px 16px;
+            border: solid #506E6A 1px; /* Borda do link */
+            color: black; /* Cor do texto do link */
+            font-weight: bold; /* Deixa o texto do link em negrito */
+            font-size: 13px; /* Tamanho da fonte do link */
+            border-radius: 4px; /* Cantos arredondados */
+            transition: all 0.3s ease;
+        }
+
+        li {
+            float: none; /* Alinha os itens da lista horizontalmente */
+            flex: 1; /* Faz todos os itens terem o mesmo tamanho */
+            max-width: 150px; /* Largura máxima para cada item */
+            text-align: center;
+        }
+
+        a:hover {
+            background-color: #506E6A; /* Cor de fundo ao passar o mouse */
+            color: white; /* Cor do texto ao passar o mouse */
+        }
+
+        /* media query para dipositivos moveis  */
+        @media only screen and (max-width: 767px) {
+            .wrapper {
+                grid-column-start: 1;
+                grid-column-end: 1;
+                
+            }
+
+            .imagem_leo {
+                grid-column-start: 1;
+                grid-column-end: 1;
+                text-align: center;
+            }
+
+            .principal {
+                grid-column-start: 1;
+                grid-column-end: 1;
+            }
+        }
+        
+    </style>
+<body>
+    <header class="container">
+        <h1 style="color: white; text-align: center;">Biografia Leonardo da Vinci </h1>
+        <br>
+
+    </header>
+    <nav class="container menu">
+        <ul>
+            <li><a href="index.html">Biografia</a></li>
+            <li><a href="obras.html">Obras</a></li>
+            <li><a href="curiosidades.html">Curiosidades</a></li>
+        </ul>
+    </nav>
+
+    <div class="container wrapper">
+        <aside class="imagem_leo">
+            <img src="leonardo-da-vinci.png">
+            <div class="infos">
+                <p><strong>Ocupação</strong> Pintor italiano</p>
+                <p>
+                    <strong>Data do Nascimento</strong>
+                    15/04/1452
+                </p>
+                <p><strong>Data da Morte</strong> 02/05/1519 (67 anos)</p>
+            </div>
+        </aside>
+
+        <section class="principal">
+            <h2>Leonardo da Vinci</h2>
+            <p>
+                Leonardo di ser Piero da Vinci, mais conhecido como Leonardo da Vinci, foi um polímata italiano do Renascimento, ativo como pintor, escultor, arquiteto, cientista, engenheiro, inventor, anatomista, músico, escritor e matemático. É amplamente considerado um dos maiores gênios da história da arte e um dos mais influentes pensadores do Renascimento.
+            </p>
+            <p>
+                Nascido em 15 de abril de 1452 em Vinci, Itália, Leonardo passou a maior parte de sua vida em Florença e Milão. Suas obras mais famosas incluem "A Última Ceia" e "Mona Lisa", que são consideradas marcos na história da arte. Além de suas contribuições artísticas, ele também fez avanços significativos em áreas como anatomia humana, engenharia e hidráulica.
+            </p>
+            <p>
+                Leonardo morreu em 2 de maio de 1519 em Amboise, França. Seu legado perdura até hoje, com suas obras sendo admiradas e estudadas em todo o mundo.
+            </p>
+    </div>
+
+    <footer class="container">
+        <h1>Desenvolvido para fins educacionais</h1>
+    </footer>
+
+</body>
+</html>
